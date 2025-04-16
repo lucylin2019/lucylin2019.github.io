@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-5089ee315d96fda33106f0b00a585fdc"}, "mark": {"type": "line"}, "encoding": {"tooltip": [{"field": "year", "type": "quantitative"}, {"field": "counts", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45, "title": "year"}, "field": "year", "type": "ordinal"}, "y": {"field": "counts", "title": "time", "type": "quantitative"}}, "title": "UFO annual trend\uff081949-2014\uff09", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-5089ee315d96fda33106f0b00a585fdc": [{"year": 1906, "counts": 1}, {"year": 1910, "counts": 2}, {"year": 1916, "counts": 1}, {"year": 1920, "counts": 1}, {"year": 1925, "counts": 1}, {"year": 1929, "counts": 1}, {"year": 1930, "counts": 1}, {"year": 1931, "counts": 2}, {"year": 1933, "counts": 1}, {"year": 1934, "counts": 1}, {"year": 1936, "counts": 2}, {"year": 1937, "counts": 2}, {"year": 1939, "counts": 3}, {"year": 1941, "counts": 1}, {"year": 1942, "counts": 2}, {"year": 1943, "counts": 9}, {"year": 1944, "counts": 9}, {"year": 1945, "counts": 9}, {"year": 1946, "counts": 10}, {"year": 1947, "counts": 37}, {"year": 1948, "counts": 8}, {"year": 1949, "counts": 16}, {"year": 1950, "counts": 28}, {"year": 1951, "counts": 20}, {"year": 1952, "counts": 49}, {"year": 1953, "counts": 33}, {"year": 1954, "counts": 53}, {"year": 1955, "counts": 32}, {"year": 1956, "counts": 45}, {"year": 1957, "counts": 72}, {"year": 1958, "counts": 47}, {"year": 1959, "counts": 50}, {"year": 1960, "counts": 66}, {"year": 1961, "counts": 48}, {"year": 1962, "counts": 73}, {"year": 1963, "counts": 86}, {"year": 1964, "counts": 88}, {"year": 1965, "counts": 188}, {"year": 1966, "counts": 193}, {"year": 1967, "counts": 188}, {"year": 1968, "counts": 220}, {"year": 1969, "counts": 155}, {"year": 1970, "counts": 147}, {"year": 1971, "counts": 130}, {"year": 1972, "counts": 158}, {"year": 1973, "counts": 226}, {"year": 1974, "counts": 273}, {"year": 1975, "counts": 319}, {"year": 1976, "counts": 279}, {"year": 1977, "counts": 268}, {"year": 1978, "counts": 335}, {"year": 1979, "counts": 245}, {"year": 1980, "counts": 246}, {"year": 1981, "counts": 164}, {"year": 1982, "counts": 183}, {"year": 1983, "counts": 153}, {"year": 1984, "counts": 186}, {"year": 1985, "counts": 218}, {"year": 1986, "counts": 193}, {"year": 1987, "counts": 223}, {"year": 1988, "counts": 241}, {"year": 1989, "counts": 251}, {"year": 1990, "counts": 259}, {"year": 1991, "counts": 234}, {"year": 1992, "counts": 252}, {"year": 1993, "counts": 309}, {"year": 1994, "counts": 421}, {"year": 1995, "counts": 1078}, {"year": 1996, "counts": 834}, {"year": 1997, "counts": 1255}, {"year": 1998, "counts": 1767}, {"year": 1999, "counts": 2805}, {"year": 2000, "counts": 2772}, {"year": 2001, "counts": 3122}, {"year": 2002, "counts": 3235}, {"year": 2003, "counts": 3962}, {"year": 2004, "counts": 4257}, {"year": 2005, "counts": 4083}, {"year": 2006, "counts": 3721}, {"year": 2007, "counts": 4269}, {"year": 2008, "counts": 4820}, {"year": 2009, "counts": 4541}, {"year": 2010, "counts": 4283}, {"year": 2011, "counts": 5107}, {"year": 2012, "counts": 7357}, {"year": 2013, "counts": 7037}, {"year": 2014, "counts": 2260}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
